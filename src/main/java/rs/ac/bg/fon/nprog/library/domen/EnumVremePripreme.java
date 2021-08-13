@@ -3,13 +3,29 @@ package rs.ac.bg.fon.nprog.library.domen;
 	import java.io.Serializable;
 
 	/**
-	 *
+	 * Klasa koja predstavlja moguce vreme pripreme recepta kao enumeracija.
+     *
 	 * @author Nadia
 	 */
 	public enum EnumVremePripreme implements Serializable {
-
-	    BRZO, SREDNJE_BRZO, ZAHTEVA_VREME;
-
+        /**
+         * brzo se priprema.
+         */
+	    BRZO,
+	    /**
+	     * Srednje brzo se priprema.
+	     */
+	    SREDNJE_BRZO,
+	    /**
+	     * Priprema zahteva vreme.
+	     */
+	    ZAHTEVA_VREME;
+		/**
+	     * Pretvara enum u String.
+	     * 
+	     * @return String Vraca vreme pripreme recepta kao String.
+	     * 
+	     */
 	    @Override
 	    public String toString() {
 	        switch (this) {
@@ -23,7 +39,13 @@ package rs.ac.bg.fon.nprog.library.domen;
 	                return "N/A";
 	        }
 	    }
-
+	    /**
+	     * Pretvara String koji predstavlja vreme pripreme recepta u enum.
+	     *
+	     * @param vreme Vreme pripreme recepta kao String.
+	     * 
+	     * @return EnumVremePripreme Vraca vreme pripreme recepta kao EnumVremePripreme.
+	     */
 	    public static EnumVremePripreme fromStringToEnum(String vreme) {
 	        switch (vreme) {
 	            case "brzo":

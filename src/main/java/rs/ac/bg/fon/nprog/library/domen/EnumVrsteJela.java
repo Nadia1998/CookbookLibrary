@@ -4,12 +4,49 @@ import java.io.Serializable;
 
 /**
  *
+ * Klasa koja predstavlja vrstu jela iz recepta kao enumeracija.
+ *
  * @author Nadia
  */
 public enum EnumVrsteJela implements Serializable {
-
-	PREDJELO, SUPA, GLAVNO_JELO, PRILOG, SALATA, DESERT, HLEB, PECIVO;
-
+    /**
+      * Predjelo kao vrsta jela.
+      */
+	PREDJELO,
+   /**
+	 * Supa kao vrsta jela.
+	 */
+	SUPA, 
+   /**
+	 * Glavno jelo kao vrsta jela.
+	 */
+	GLAVNO_JELO, 
+   /**
+	 * Prilog kao vrsta jela.
+     */
+	PRILOG, 
+   /**
+	 * Predjelo kao vrsta jela.
+	 */
+	SALATA, 
+   /**
+	 * Desert kao vrsta jela.
+	 */
+	DESERT, 
+   /**
+	 * Hleb kao vrsta jela.
+	 */
+	HLEB, 
+   /**
+	 * Pecivo kao vrsta jela.
+	 */
+	PECIVO;
+	/**
+     * Pretvara enum u String.
+     * 
+     * @return String Vraca vrstu jela kao String.
+     * 
+     */
 	@Override
 	public String toString() {
 
@@ -34,7 +71,13 @@ public enum EnumVrsteJela implements Serializable {
 			return "N/A";
 		}
 	}
-
+	 /**
+     * Pretvara String koji predstavlja vrstu jela u enum.
+     *
+     * @param vrsta Vrsta jela kao String.
+     * 
+     * @return EnumVrstaJela Vraca vrstu jela kao EnumVrstaJela.
+     */
 	public static EnumVrsteJela fromStringToEnum(String vrsta) {
 		switch (vrsta) {
 		case "predjelo":

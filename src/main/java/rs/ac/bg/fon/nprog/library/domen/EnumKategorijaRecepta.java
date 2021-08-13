@@ -4,13 +4,66 @@ package rs.ac.bg.fon.nprog.library.domen;
 import java.io.Serializable;
 
 /**
+ * Klasa koja predstavlja moguce kategorije recepta kao enumeracija.
  *
  * @author Nadia
  */
 public enum EnumKategorijaRecepta implements Serializable {
-
-    GOVEDINA, JAGNJETINA, SVINJETINA, RIBA, POVRCE, SALATA, KOLACI, PIZZA, PASTA, MUSAKA, RIBA_I_MORSKI_PLODOVI, TRADICIONALNA_KUHINJA;
-
+   /**
+    * govedina kao kategorija jela.
+    */
+    GOVEDINA, 
+    /**
+     * jagnjetina kao kategorija jela.
+     */
+    JAGNJETINA,
+    /**
+     * svinjetina kao kategorija jela.
+     */
+    SVINJETINA, 
+    /**
+     * riba kao kategorija jela.
+     */
+    RIBA, 
+    /**
+     * povrce kao kategorija jela.
+     */
+    POVRCE, 
+    /**
+     * salata kao kategorija jela.
+     */
+    SALATA,
+    /**
+     * kolaci kao kategorija jela.
+     */
+    KOLACI,
+    /**
+     * pizza kao kategorija jela.
+     */
+    PIZZA,
+    /**
+     * pasta kao kategorija jela.
+     */
+    PASTA,
+    /**
+     * musaka kao kategorija jela.
+     */
+    MUSAKA,
+    /**
+     * riba i morski plodovi kao kategorija jela.
+     */
+    RIBA_I_MORSKI_PLODOVI,
+    /**
+     * tradicionalna kuhinja kao kategorija jela
+     */
+    TRADICIONALNA_KUHINJA;
+	
+	/**
+     * Pretvara enum u String.
+     * 
+     * @return String Vraca kategoriju recepta kao String.
+     * 
+     */
     @Override
     public String toString() {
         switch (this) {
@@ -27,7 +80,7 @@ public enum EnumKategorijaRecepta implements Serializable {
             case SALATA:
                 return "salata";
             case KOLACI:
-                return "kolači";
+                return "kolaci";
             case PIZZA:
                 return "pizza";
             case PASTA:
@@ -44,9 +97,11 @@ public enum EnumKategorijaRecepta implements Serializable {
     }
         
     /**
+     * Pretvara String koji predstavlja kategoriju recepta u enum.
      *
-     * @param kategorija
-     * @return
+     * @param kategorija Kategorija recepta kao String.
+     * 
+     * @return EnumKategorijaRecepta Vraca kategoriju recepta kao EnumKategorijaRecepta.
      */
     public static EnumKategorijaRecepta fromStringToEnum(String kategorija) {
         switch (kategorija) {
@@ -62,7 +117,7 @@ public enum EnumKategorijaRecepta implements Serializable {
                 return POVRCE;
             case "salata":
                 return SALATA;
-            case "kolači":
+            case "kolaci":
                 return KOLACI;
             case "pizza":
                 return PIZZA;
