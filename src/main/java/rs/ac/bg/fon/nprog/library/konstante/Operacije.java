@@ -16,6 +16,5 @@ public class  Operacije implements Serializable{
     public static final int VRATI_SASTOJKE_RECEPTA = 10;
     public static final int IZMENI_RECEPT = 11;
     public static final int IZBACI_KLIJENTA=12;
-
 }
 
