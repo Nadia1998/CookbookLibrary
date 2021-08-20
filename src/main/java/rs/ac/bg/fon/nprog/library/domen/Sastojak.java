@@ -105,8 +105,17 @@ public class Sastojak implements Serializable {
      * Postavlja naziv sastojka na novu vrednost.
      * 
      * @param naziv Naziv sastojka kao String.
+     * 
+     * @throws java.lang.NullPointerException ukoliko je naziv sastojka null.
+     * @throws java.lang.RuntimeException ukoliko je naziv sastojka prazan string.
      */
     public void setNaziv(String naziv) {
+    	if(naziv==null) {
+    		throw new NullPointerException("Naziv ne sme biti null.");
+    	}
+    	if(naziv.isEmpty()) {
+    		throw new RuntimeException("Naziv ne sme biti prazan string.");
+    	}
         this.naziv = naziv;
     }
     /**
@@ -119,10 +128,15 @@ public class Sastojak implements Serializable {
     }
     /**
      * Postavlja meru sastojka na novu vrednost.
-     * 
-     * @param mera Mera sastojka kao EnumMera.
+     *@param mera Mera kao EnumMera.
+     *@throws java.lang.NullPointerException ukoliko je enum mera sastojka null.
+     *
      */
     public void setMera(EnumMera mera) {
+    	if(mera==null) {
+    		throw new NullPointerException("Enum mera ne sme biti null.");
+    	}
+    	
         this.mera = mera;
     }
     /**
