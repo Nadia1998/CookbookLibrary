@@ -136,23 +136,6 @@ class ReceptTest {
 	}
 	
 	@Test
-	public void testSetVremePripremeNotNull() {
-		assertThrows(java.lang.NullPointerException.class, ()->r.setVremePripreme(null));
-	}
-	@Test
-	public void testSetNivoTezineNotNull() {
-		assertThrows(java.lang.NullPointerException.class, ()->r.setNivoTezine(null));
-	}
-	@Test
-	public void testSetVrstaJelaNotNull() {
-		assertThrows(java.lang.NullPointerException.class, ()->r.setVrstaJela(null));
-	}
-	@Test
-	public void testSetKategorijaReceptaNotNull() {
-		assertThrows(java.lang.NullPointerException.class, ()->r.setKategorijaRecepta(null));
-	}
-	
-	@Test
 	public void testSetOpisReceptaNotNull() {
 		assertThrows(java.lang.NullPointerException.class, ()->r.setOpisRecepta(null));
 	}

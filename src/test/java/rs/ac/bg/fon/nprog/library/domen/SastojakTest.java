@@ -79,10 +79,6 @@ class SastojakTest {
 	public void testSetNazivNotEmpty() {
 		assertThrows(java.lang.RuntimeException.class, ()->s.setNaziv(""));
 	}
-	@Test
-	public void testSetMeraNotNull() {
-		assertThrows(java.lang.NullPointerException.class, ()->s.setNaziv(null));
-	}
-	
+
 	
 }
