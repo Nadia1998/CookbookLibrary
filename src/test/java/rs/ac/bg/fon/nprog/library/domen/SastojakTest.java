@@ -70,5 +70,19 @@ class SastojakTest {
 		s.setRecept(r);
 		assertEquals(r, s.getRecept());
 	}
-
+	
+	@Test
+	public void testSetNazivNotNull() {
+		assertThrows(java.lang.NullPointerException.class, ()->s.setNaziv(null));
+	}
+	@Test
+	public void testSetNazivNotEmpty() {
+		assertThrows(java.lang.RuntimeException.class, ()->s.setNaziv(""));
+	}
+	@Test
+	public void testSetMeraNotNull() {
+		assertThrows(java.lang.NullPointerException.class, ()->s.setNaziv(null));
+	}
+	
+	
 }
