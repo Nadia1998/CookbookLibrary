@@ -56,7 +56,7 @@ class KorisnikTest {
 		k.setPrezime("Jankovic");
 		assertEquals("Jankovic", k.getPrezime());
 	}
-	
+
 	@Test
 	public void testSetKorisnickoIme() {
 		k.setLozinka("y");
@@ -71,6 +71,44 @@ class KorisnikTest {
 
 	}
 
+	@Test
+	public void testSetImeNotNull() {
+		assertThrows(java.lang.NullPointerException.class, () -> k.setIme(null));
+	}
 
+	@Test
+	public void testSetImeNotEmpty() {
+		assertThrows(java.lang.RuntimeException.class, () -> k.setIme(""));
+	}
+
+	@Test
+	public void testSetPrezimeNotNull() {
+		assertThrows(java.lang.NullPointerException.class, () -> k.setPrezime(null));
+	}
+
+	@Test
+	public void testSetPrezimeNotEmpty() {
+		assertThrows(java.lang.RuntimeException.class, () -> k.setPrezime(""));
+	}
+
+	@Test
+	public void testSetKoriscnikoImeNotNull() {
+		assertThrows(java.lang.NullPointerException.class, () -> k.setKorisnickoIme(null));
+	}
+
+	@Test
+	public void testSetKorisnickoImeNotEmpty() {
+		assertThrows(java.lang.RuntimeException.class, () -> k.setKorisnickoIme(""));
+	}
+
+	@Test
+	public void testSetLozinkaNotNull() {
+		assertThrows(java.lang.NullPointerException.class, () -> k.setLozinka(null));
+	}
+
+	@Test
+	public void testSetLozinkaNotEmpty() {
+		assertThrows(java.lang.RuntimeException.class, () -> k.setLozinka(""));
+	}
 
 }
