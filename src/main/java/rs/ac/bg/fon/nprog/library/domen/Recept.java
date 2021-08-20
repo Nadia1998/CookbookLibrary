@@ -91,8 +91,15 @@ public class Recept implements Serializable {
      * Postavlja listu sastojaka na novu vrednost.
      * 
      * @param sastojci Lista sastojaka kao List.
+     * 
+     * 
+     * @throws java.lang.NullPointerException ukoliko je lista sastojaka null.
      */
     public void setSastojci(List<Sastojak> sastojci) {
+    	if(sastojci==null) {
+    		throw new NullPointerException("Lista sastojaka ne sme biti null.");
+    	}
+
         this.sastojci = sastojci;
     }
 
@@ -124,9 +131,18 @@ public class Recept implements Serializable {
      * Postavlja naziv recepta na novu vrednost.
      * 
      * @param naziv Naziv recepta kao String.
+     * 
+     * @throws java.lang.RuntimeException ukoliko je naziv prazan string.
+     * @throws java.lang.NullPointerException ukoliko je naziv null.
      */
     public void setNaziv(String naziv) {
-        this.naziv = naziv;
+    	if(naziv==null) {
+    		throw new NullPointerException("Naziv ne sme biti null.");
+    	}
+    	if(naziv.isEmpty()) {
+    		throw new RuntimeException("Naziv ne sme biti prazan string.");
+    	}
+    	this.naziv = naziv;
     }
     /**
      * Vraca vreme pripreme recepta.
@@ -140,9 +156,15 @@ public class Recept implements Serializable {
      * Postavlja vreme pripreme recepta na novu vrednost.
      * 
      * @param vremePripreme Vreme pripreme recepta kao EnumVremePripreme.
+     * 
+     * @throws java.lang.NullPointerException ukoliko je enum vreme pripreme null.
      */
     public void setVremePripreme(EnumVremePripreme vremePripreme) {
-        this.vremePripreme = vremePripreme;
+    	if(vremePripreme==null) {
+    		throw new NullPointerException("Enum ne sme biti null.");
+    	}
+    	
+    	this.vremePripreme = vremePripreme;
     }
     /**
      * Vraca nivo tezine recepta.
@@ -156,8 +178,13 @@ public class Recept implements Serializable {
      * Postavlja nivo tezine recepta na novu vrednost.
      * 
      * @param nivoTezine Nivo tezine recepta kao EnumNivoTezine.
+     * 
+     * @throws java.lang.NullPointerException ukoliko je enum vreme tezine null.
      */
     public void setNivoTezine(EnumNivoTezine nivoTezine) {
+    	if(nivoTezine==null) {
+    		throw new NullPointerException("Enum ne sme biti null.");
+    	}
         this.nivoTezine = nivoTezine;
     }
     /**
@@ -172,8 +199,13 @@ public class Recept implements Serializable {
      * Postavlja vrstu jela recepta na novu vrednost.
      * 
      * @param vrstaJela Vrsta jela recepta kao EnumVrstaJela.
+     * 
+     * @throws java.lang.NullPointerException ukoliko je enum vrsta jela null.
      */
     public void setVrstaJela(EnumVrsteJela vrstaJela) {
+    	if(vrstaJela==null) {
+    		throw new NullPointerException("Enum ne sme biti null.");
+    	}
         this.vrstaJela = vrstaJela;
     }
     /**
@@ -188,9 +220,14 @@ public class Recept implements Serializable {
      * Postavlja kategoriju recepta na novu vrednost.
      * 
      * @param kategorijaRecepta Kategorija recepta recepta kao EnumKategorijaRecepta .
+     * 
+     *@throws java.lang.NullPointerException ukoliko je enum kategorija recepta null.
      */
     public void setKategorijaRecepta(EnumKategorijaRecepta kategorijaRecepta) {
-        this.kategorijaRecepta = kategorijaRecepta;
+    	if(kategorijaRecepta==null) {
+    		throw new NullPointerException("Enum ne sme biti null.");
+    	}
+    	this.kategorijaRecepta = kategorijaRecepta;
     }
     /**
      * Vraca opis recepta.
@@ -204,8 +241,17 @@ public class Recept implements Serializable {
      * Postavlja opis recepta na novu vrednost.
      * 
      * @param opisRecepta Opis recepta kao String vrednost.
+     * 
+     * @throws java.lang.NullPointerException ukoliko je opis recepta null.
+     * @throws java.lang.RuntimeException ukoliko je opis recepta prazan string.
      */
     public void setOpisRecepta(String opisRecepta) {
+    	if(opisRecepta==null) {
+    		throw new NullPointerException("Opis ne sme biti null.");
+    	}
+    	if(opisRecepta.isEmpty()) {
+    		throw new RuntimeException("Opis ne sme biti prazan string.");
+    	}
         this.opisRecepta = opisRecepta;
     }
     /**

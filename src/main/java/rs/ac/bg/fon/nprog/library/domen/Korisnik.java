@@ -84,8 +84,17 @@ public class Korisnik implements Serializable{
      * Postavlja ime korisnika na novu vrednost.
      * 
      * @param ime Ime korisnika kao String vrednost.
+     * 
+     * @throws java.lang.RuntimeException ukoliko je ime prazan string.
+     * @throws java.lang.NullPointerException ukoliko je ime null.
      */
     public void setIme(String ime) {
+    	if(ime==null) {
+    		throw new NullPointerException("Ime ne sme biti null.");
+    	}
+    	if(ime.isEmpty()) {
+    		throw new RuntimeException("Ime ne sme biti prazan string.");
+    	}
         this.ime = ime;
     }
     /**
@@ -100,8 +109,17 @@ public class Korisnik implements Serializable{
      * Postavlja prezime korisnika na novu vrednost.
      * 
      * @param prezime Prezime korisnika kao String vrednost.
+     * 
+     * @throws java.lang.RuntimeException ukoliko je prezime prazan string.
+     * @throws java.lang.NullPointerException ukoliko je prezime null.
      */
     public void setPrezime(String prezime) {
+    	if(prezime==null) {
+    		throw new NullPointerException("Prezime ne sme biti null.");
+    	}
+    	if(prezime.isEmpty()) {
+    		throw new RuntimeException("Prezime ne sme biti prazan string.");
+    	}
         this.prezime = prezime;
     }
     /**
@@ -116,8 +134,17 @@ public class Korisnik implements Serializable{
      * Postavlja korisnicko ime korisnika na novu vrednost.
      * 
      * @param korisnickoIme Korisnicko ime korisnika kao String vrednost.
+     * 
+     * @throws java.lang.RuntimeException ukoliko je korisnicko ime prazan string.
+     * @throws java.lang.NullPointerException ukoliko je korisnicko ime null.
      */
     public void setKorisnickoIme(String korisnickoIme) {
+    	if(korisnickoIme==null) {
+    		throw new NullPointerException("Korisnicko ime ne sme biti null.");
+    	}
+    	if(korisnickoIme.isEmpty()) {
+    		throw new RuntimeException("Korisnicko ime ne sme biti prazan string.");
+    	}
         this.korisnickoIme = korisnickoIme;
     }
     /**
@@ -132,8 +159,17 @@ public class Korisnik implements Serializable{
      * Postavlja lozinku korisnika na novu vrednost.
      * 
      * @param lozinka Lozinka korisnika kao String vrednost.
+     * 
+     * @throws java.lang.RuntimeException ukoliko je lozinka prazan string.
+     * @throws java.lang.NullPointerException ukoliko je lozinka null.
      */
     public void setLozinka(String lozinka) {
+    	if(lozinka==null) {
+    		throw new NullPointerException("Lozinka ne sme biti null.");
+    	}
+    	if(lozinka.isEmpty()) {
+    		throw new RuntimeException("Lozinka ne sme biti prazan string.");
+    	}
         this.lozinka = lozinka;
     }
 
